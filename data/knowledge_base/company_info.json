@@ -1,0 +1,19 @@
+[
+  {
+    "id": "info_001",
+    "title": "About Our Company",
+    "category": "company",
+    "name": "AgentFlow AI solutions",
+    "content": "We are a leading AI solutions provider based in Germany, specializing in production-ready machine learning systems. Founded in 2019, we've helped 50+ companies across automotive, manufacturing, e-commerce, and finance sectors implement AI at scale.\n\nOur Expertise:\n- Computer Vision (quality control, object detection)\n- Natural Language Processing (chatbots, document analysis)\n- Predictive Analytics (maintenance, demand forecasting)\n- Recommendation Systems\n- MLOps & Model Deployment\n\nTeam: 25 ML engineers, 5 data scientists\nCertifications: ISO 27001, SOC 2 Type II\nClients: BMW suppliers, major e-commerce platforms, fintech companies\n\nWhy Choose Us:\n1. Production-first approach - we don't do proofs of concept, we build systems\n2. Fast deployment - average 6-8 weeks from contract to production\n3. German data privacy - all data stays in EU, GDPR compliant\n4. Post-deployment support - 24/7 monitoring and retraining\n5. Transparent pricing - no hidden costs",
+    "tags": ["company", "about","name"],
+    "year": 2024
+  },
+  {
+    "id": "info_002",
+    "title": "Our Development Process",
+    "category": "process",
+    "content": "We follow a structured 4-phase approach:\n\nPhase 1: Discovery (1-2 weeks)\n- Requirements gathering\n- Data assessment\n- Feasibility analysis\n- Cost estimation\n- Proof of value on sample data\n\nPhase 2: Development (3-4 weeks)\n- Data pipeline setup\n- Model training and optimization\n- Integration with existing systems\n- Security and compliance review\n\nPhase 3: Deployment (1-2 weeks)\n- Staged rollout\n- Load testing\n- User training\n- Documentation\n\nPhase 4: Optimization (ongoing)\n- Performance monitoring\n- Model retraining\n- Feature updates\n- Monthly review meetings\n\nAll projects include:\n- Dedicated ML engineer\n- Project manager\n- Weekly status updates\n- Source code delivery\n- 90-day warranty",
+    "tags": ["process", "methodology"],
+    "year": 2024
+  }
+]

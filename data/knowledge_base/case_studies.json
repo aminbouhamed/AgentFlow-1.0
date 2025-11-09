@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cs_001",
+    "title": "BMW Supplier Quality Control Success",
+    "category": "case_study",
+    "industry": "automotive",
+    "content": "Challenge: A tier-1 BMW supplier struggled with manual quality inspection of 50,000+ parts daily, leading to 5% defect rate and costly recalls.\n\nSolution: Implemented DefectDetect Pro, our computer vision system using self-supervised learning with MoCo architecture. System processes images at 100ms per part.\n\nResults:\n- Defect detection improved to 99.2% accuracy\n- False positive rate reduced from 8% to 0.3%\n- ROI achieved in 6 months\n- Annual savings: €2.1M\n- Integration with existing SAP system completed in 3 weeks\n\nTechnology: PyTorch, ResNet-50 backbone, Edge deployment on NVIDIA Jetson",
+    "tags": ["automotive", "quality-control", "computer-vision", "manufacturing"],
+    "client_size": "large",
+    "year": 2024
+  },
+  {
+    "id": "cs_002",
+    "title": "E-Commerce Recommendation Engine - Fashion Retailer",
+    "category": "case_study",
+    "industry": "e-commerce",
+    "content": "Challenge: German fashion retailer (€50M revenue) had 68% cart abandonment rate and low cross-sell conversion.\n\nSolution: Deployed AI-powered recommendation system combining collaborative filtering and visual similarity search. Real-time personalization based on browsing behavior.\n\nResults:\n- Cart abandonment reduced to 42%\n- Average order value increased 23%\n- Cross-sell conversion improved from 3% to 11%\n- System handles 10,000 concurrent users\n- A/B testing showed 17% revenue lift\n\nTechnology: LightGBM, CLIP embeddings, Redis caching, AWS SageMaker",
+    "tags": ["e-commerce", "recommendations", "personalization", "real-time"],
+    "client_size": "medium",
+    "year": 2023
+  },
+  {
+    "id": "cs_003",
+    "title": "Predictive Maintenance - Industrial Equipment",
+    "category": "case_study",
+    "industry": "manufacturing",
+    "content": "Challenge: Siemens partner experienced unexpected equipment failures causing €500K monthly losses in downtime.\n\nSolution: Built IoT sensor-based predictive maintenance system. LSTM models analyze vibration, temperature, pressure data to predict failures 48 hours in advance.\n\nResults:\n- Unplanned downtime reduced by 73%\n- Maintenance costs decreased 31%\n- Equipment lifespan extended 18%\n- System monitors 250+ machines in real-time\n- Mobile alerts for maintenance teams\n\nTechnology: Azure IoT Hub, LSTM networks, Time series forecasting, Power BI dashboards",
+    "tags": ["predictive-maintenance", "iot", "manufacturing", "time-series"],
+    "client_size": "large",
+    "year": 2024
+  },
+  {
+    "id": "cs_004",
+    "title": "Fraud Detection System - Fintech",
+    "category": "case_study",
+    "industry": "finance",
+    "content": "Challenge: German neobank detected only 62% of fraudulent transactions, losing €1.2M annually. High false positive rate (15%) frustrated legitimate customers.\n\nSolution: Implemented real-time fraud detection using ensemble models (XGBoost + Isolation Forest). Graph neural networks analyze transaction patterns.\n\nResults:\n- Fraud detection rate: 96.8%\n- False positives reduced to 2.1%\n- Average detection latency: 47ms\n- Saved €980K in first year\n- Compliant with BaFin regulations\n\nTechnology: XGBoost, Graph Neural Networks, Kafka streaming, PostgreSQL",
+    "tags": ["fraud-detection", "fintech", "real-time", "compliance"],
+    "client_size": "medium",
+    "year": 2024
+  },
+  {
+    "id": "prod_001",
+    "title": "DefectDetect Pro - Computer Vision Platform",
+    "category": "product",
+    "industry": "general",
+    "content": "DefectDetect Pro is our flagship computer vision platform for automated quality control.\n\nKey Features:\n- Real-time defect detection (<100ms latency)\n- Self-supervised learning - minimal labeled data needed\n- Edge deployment support (NVIDIA Jetson, Intel NCS)\n- Integration with major industrial systems (SAP, Siemens PLC)\n- Explainable AI - visual heatmaps show decision reasoning\n- Multi-class detection (scratches, dents, color defects, dimensional issues)\n\nPricing:\n- Starter: €15,000 (up to 5 cameras)\n- Professional: €45,000 (up to 20 cameras)\n- Enterprise: Custom pricing\n- 30-day trial available\n\nDeployment: 2-4 weeks typical\nTraining required: 500-2000 images\nSupport: 24/7 for Enterprise",
+    "tags": ["product", "computer-vision", "quality-control"],
+    "client_size": "all",
+    "year": 2024
+  },
+  {
+    "id": "prod_002",
+    "title": "SmartRecommend - Personalization Engine",
+    "category": "product",
+    "industry": "e-commerce",
+    "content": "SmartRecommend delivers real-time personalized recommendations for e-commerce platforms.\n\nKey Features:\n- Multi-modal recommendations (text, image, behavior)\n- A/B testing framework built-in\n- Cold-start handling for new users/items\n- Integration with Shopify, WooCommerce, Magento\n- GDPR-compliant data handling\n- Real-time model updates\n- Mobile SDK for native apps\n\nPerformance:\n- <50ms recommendation latency\n- Handles 100,000 concurrent users\n- 99.9% uptime SLA\n\nPricing:\n- Based on MAU (Monthly Active Users)\n- Starter: €500/month (up to 10K MAU)\n- Growth: €2,000/month (up to 100K MAU)\n- Enterprise: Custom\n\nFree trial: 14 days",
+    "tags": ["product", "recommendations", "e-commerce", "personalization"],
+    "client_size": "all",
+    "year": 2024
+  }
+]

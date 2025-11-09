@@ -1,0 +1,26 @@
+Create `.dockerignore`:
+```
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.git/
+.gitignore
+*.md
+.vscode/
+.idea/
+*.log
+test_results.json
+monitoring/metrics_log.jsonl
+qdrant_storage/
+Dockerfile.old
+Dockerfile.prod
+Dockerfile.railway
+old_researcher.py
+writer_old.py
+requirements_old.txt

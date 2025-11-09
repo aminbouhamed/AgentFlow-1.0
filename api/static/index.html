@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentFlow - AI Email Assistant</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { color: #667eea; text-align: center; margin-bottom: 10px; }
+        .subtitle { color: #666; text-align: center; margin-bottom: 30px; }
+        textarea {
+            width: 100%;
+            min-height: 250px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:disabled { background: #ccc; }
+        .loading { display: none; text-align: center; margin-top: 20px; }
+        .loading.show { display: block; }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .result { display: none; margin-top: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; }
+        .result.show { display: block; }
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .metric { padding: 15px; background: white; border-radius: 10px; text-align: center; }
+        .metric-value { font-size: 1.8rem; font-weight: bold; color: #667eea; }
+        .response-box { background: white; padding: 20px; border-radius: 10px; white-space: pre-wrap; font-family: 'Courier New', monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AgentFlow</h1>
+        <p class="subtitle">Multi-Agent AI Email Assistant</p>
+        
+        <textarea id="email" placeholder="Paste email here...">Subject: AI Implementation Query
+
+We're a manufacturing company looking to implement AI for quality control. Can you help?
+
+Best regards,
+Anna Weber, AutoParts GmbH</textarea>
+        
+        <button onclick="process()" id="btn">🚀 Process with AI Agents</button>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>AI Agents working... (~25 seconds)</p>
+        </div>
+        
+        <div class="result" id="result">
+            <h3>Generated Response</h3>
+            <div class="metrics" id="metrics"></div>
+            <div class="response-box" id="response"></div>
+        </div>
+    </div>
+
+    <script>
+        async function process() {
+            const email = document.getElementById('email').value;
+            const btn = document.getElementById('btn');
+            const loading = document.getElementById('loading');
+            const result = document.getElementById('result');
+            
+            btn.disabled = true;
+            loading.classList.add('show');
+            result.classList.remove('show');
+            
+            try {
+                const res = await fetch('/process', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({email_text: email, priority: 'normal'})
+                });
+                const data = await res.json();
+                
+                if (res.ok) {
+                    document.getElementById('metrics').innerHTML = `
+                        <div class="metric"><div class="metric-value">${data.decision}</div><div>Decision</div></div>
+                        <div class="metric"><div class="metric-value">${(data.confidence*100).toFixed(0)}%</div><div>Confidence</div></div>
+                        <div class="metric"><div class="metric-value">${data.processing_time.toFixed(1)}s</div><div>Time</div></div>
+                    `;
+                    document.getElementById('response').textContent = `Subject: ${data.response_subject}\n\n${data.response_body}`;
+                    result.classList.add('show');
+                } else {
+                    alert('Error: ' + (data.detail || 'Failed'));
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                loading.classList.remove('show');
+            }
+        }
+    </script>
+</body>
+</html>

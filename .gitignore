@@ -1,0 +1,37 @@
+# Environment
+.env
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data
+qdrant_storage/
+monitoring/metrics_log.jsonl
+test_results.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+#experiment related files and folders 
+writer_old.py
+old_researcher.py
+Dockerfile.old
+Dockerfile.railway.api
+Dockerfile.railway.streamlit
+Dockerfile
+Dockerfile.prod
+requirements_old.txt
+deleteqdrant.ipynb
+/experiments/

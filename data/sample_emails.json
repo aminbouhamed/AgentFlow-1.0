@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "subject": "AI Implementation Query",
+    "body": "Hello, we're a mid-sized manufacturing company in Munich looking to implement AI for quality control. We produce automotive parts and need to detect defects in real-time. What solutions do you offer?",
+    "sender": "Anna Weber, Quality Manager at AutoParts GmbH"
+  },
+  {
+    "id": 2,
+    "subject": "Partnership Opportunity",
+    "body": "Hi, I represent a VC firm interested in AI startups. Would love to discuss potential collaboration. Are you open to investment discussions?",
+    "sender": "Thomas Klein, Partner at VentureCapital AG"
+  },
+  {
+    "id": 3,
+    "subject": "Technical Support Needed",
+    "body": "Our current AI model is showing degraded performance. Can you help us debug? We're seeing accuracy drop from 95% to 78% over the past month.",
+    "sender": "Sarah Müller, ML Engineer at DataCorp"
+  },
+  {
+    "id": 4,
+    "subject": "Request for Proposal - Customer Service AI",
+    "body": "We need an AI assistant for our e-commerce platform. Requirements: handle 1000+ daily inquiries, German/English support, integrate with Shopify. Please send pricing and timeline.",
+    "sender": "Max Fischer, CTO at ShopOnline.de"
+  },
+  {
+    "id": 5,
+    "subject": "Speaking Opportunity",
+    "body": "Would you be interested in speaking at our AI conference in Berlin next month? Topic: Production ML systems. 500+ attendees expected.",
+    "sender": "Lisa Schmidt, Event Manager at TechEvents"
+  }
+]
